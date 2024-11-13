@@ -1,0 +1,660 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+.padding{
+    padding: 40px 0;
+}
+section>h2{
+    padding: 80px 0 40px 0;
+    font-size: 3rem;
+    text-align: center;
+}
+.bg-color{
+    background: linear-gradient(180deg,#135052,#16777a);
+    color: #fff;
+}
+a{
+    text-decoration: none;
+}
+
+
+
+/* navbar */
+nav{
+    width: 100%;
+    background-color: #fff;
+    height: 10vh;
+    z-index: 999999;
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed !important;
+    top: 0;
+    /* margin-top: -30px; */
+}
+.nav-left{
+    /* border: 2px solid green; */
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-left>.logo{
+    width: 5vw;
+    height: 5vh;
+    /* border: 2px solid rgb(252, 0, 42); */
+    border-radius: 60% 30% 40% 30%;
+}
+.nav-center{
+    display: flex;
+    justify-content: space-evenly;
+    width: 33vw;
+    height: 7vh;
+    /* border: 2px solid gold; */
+    display: flex;
+    align-items: center;
+}
+.nav-center>ul{
+    /* border: 2px solid rebeccapurple; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.nav-center>ul>li{
+    /* border: 2px solid yellowgreen; */
+    padding: 1vh 1vw;
+    font-size: 20px;
+}
+.nav-center>ul>li:hover{
+    background-color: #135052;
+    color: #fff;
+}
+.nav-right{
+    /* border: 2px solid blue; */
+    height: 7vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.nav-right>div{
+    /* border: 2px solid rgb(208, 255, 0); */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.button {
+    margin-right: 1vw;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    padding-block: 0.5rem;
+    padding-inline: 1.25rem;
+    background-color: rgb(0 107 179);
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #ffff;
+    gap: 10px;
+    font-weight: bold;
+    border: 3px solid #ffffff4d;
+    outline: none;
+    overflow: hidden;
+    font-size: 15px;
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .button:hover {
+    transform: scale(1.05);
+    border-color: #fff9;
+  }
+  
+  .button:hover .icon {
+    transform: translate(4px);
+  }
+  
+  .button:hover::before {
+    animation: shine 1.5s ease-out infinite;
+  }
+  
+  .button::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+  }
+  
+  @keyframes shine {
+    0% {
+      left: -100px;
+    }
+  
+    60% {
+      left: 100%;
+    }
+  
+    to {
+      left: 100%;
+    }
+  }
+.button-2 {
+    position: relative;
+    overflow: hidden;
+    height: 3rem;
+    padding: 0 2rem;
+    border-radius: 1.5rem;
+    background: #3d3a4e;
+    background-size: 400%;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .button-2:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .button-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .button-2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(
+      82.3deg,
+      rgba(150, 93, 233, 1) 10.8%,
+      rgba(99, 88, 238, 1) 94.3%
+    );
+    transition: all 0.475s;
+  }
+
+/* /navbar */
+
+
+
+/* home */
+.home-bg{
+    background: linear-gradient(90deg,#00000062,#00000062),url('https://bootstrapmade.com/content/demo/Gp/assets/img/cta-bg.jpg');
+    background-attachment: fixed;
+    padding: 180px 0 80px 0;
+    color: #fff;
+}
+.home{
+    /* border: 2px solid green; */
+    padding: 0 0 80px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: #fff;
+    margin-top: 5vh;
+}
+.home-right{
+    /* border: 2px solid red; */
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    animation: move 2s infinite ease-in-out alternate-reverse;
+    order: 1 !important;
+}
+@keyframes move {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(120px);
+    }
+    100%{
+        transform: translateY(-40px);
+    }
+}
+.home-left{
+    /* border: 2px solid red; */
+    padding: 60px 20px;
+    width: 900px;
+    height: auto;
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.home-left>h3{
+    letter-spacing: .2rem;
+    font-size: 2rem;
+}
+.home-left>p{
+    font-size: 1.5rem;
+    padding-top: 40px;
+}
+.home-left>h1{
+    line-height: 5rem;
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: .6rem;
+}
+/* /home */
+
+
+
+/* about */
+.about-bg{
+    background: linear-gradient(180deg,#135052,#16777a);
+    padding: 80px 0 20px 0;
+    color: #ffffff;
+}
+.about{
+    /* border: 2px solid green; */
+    padding: 0 0 80px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: #f8f8f8;
+}
+.about-left{
+    /* border: 2px solid red; */
+    width: 700px;
+    height: 500px;
+    background: linear-gradient(180deg,#1350524f,#16777a75),url("https://tripventura.com/cdn/shop/files/63f71480b5cc00f5fdf6f2fe.webp?v=1703124719") no-repeat center center /cover;
+}
+.about-right{
+    /* border: 2px solid red; */
+    padding: 60px 20px;
+    width: 900px;
+    height: auto;
+    text-align: center;
+    font-size: 1.1rem;
+}
+.about-right>h2{
+    font-size: 4rem;
+}
+/* /about */
+
+
+
+/* Testimonial */
+.box{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 60px 0;
+}
+.card{
+    background: url('https://bootstrapmade.com/content/demo/Gp/assets/img/team/team-1.jpg') no-repeat center center /cover;
+    border: 2px solid #00000062;
+    width: 400px;
+    margin: 2vw 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    height: 400px;
+    transition-duration: 2s !important;
+}
+.card-text{
+    position: relative;
+    background-color: #fff;
+    width: 275px;
+    top: 150px;
+    height: 70px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    display: none;
+    transition: 1s;
+    transition-duration: 10s;
+}
+.card-text>.detail{
+    margin-top: -11vh;
+    padding: 13px 0;
+    color: #fff;
+    background-color: #000000a9;
+}
+.card:hover>.card-text{
+    display: flex;
+    animation: hover 1s ease-in-out alternate;
+}
+@keyframes hover {
+    0%{
+        transform: scale(0.2);
+    }
+    /* 50%{
+        transform: scale(1);
+    } */
+    100%{
+        transform: scale(1);
+    }
+}
+.icons{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 3vh;
+}
+.icons>a>i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1vw;
+    height: 3vh;
+    color: #000;
+    font-size: 1.3rem;
+}
+.icons>a>.fa-facebook{
+    transition: 1s;
+}
+.icons>a>.fa-facebook:hover{
+    background-color: #fff !important;
+    color: #4267B2 !important;
+    transform: scale(2);
+    transition: 1s;
+}
+.icons>.fa-youtube{
+    transition: 1s;
+}
+.icons>a>.fa-youtube:hover{
+    background-color: #fff !important;
+    color: red !important;
+    transform: scale(2);
+    transition: 1s;
+}
+.icons>a>.fa-twitter{
+    transition: 1s;
+}
+.icons>a>.fa-twitter:hover{
+    background-color: #fff !important;
+    color: #1DA1F2 !important;
+    transform: scale(2);
+    transition: 1s;
+}
+.icons>a>.fa-instagram{
+    transition: 1s;
+}
+.icons>a>.fa-instagram:hover{
+    background-color: #fff !important;
+    background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    transform: scale(2);
+    transition: 1s;
+}
+/* /Testimonial */
+
+
+
+/* services */
+.try{
+    background: #fff !important;
+    background: linear-gradient(to left, #00FF00 1%, #B92B3E 11%, #9CFFB3 36%, #6A519B 86%, #008E8E 16%) !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+
+}
+.services-box{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 60px 0;
+    
+}
+.services-card{
+    border: 2px solid #ffffff62;
+    width: 400px;
+    margin: 2vw 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition-duration: 1s;
+}
+.services-card:hover{
+    box-shadow: 0px 5px 10px 0px #81CDE3;  
+    border: 2px dotted #ffffff62;
+    transform: scale(1.1);
+    transition-duration: 1s;
+}
+.services-card-img{
+    padding: 25px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.services-card-text{
+    text-align: center;
+    padding: 20px 0;
+}
+/* /services */
+
+
+
+
+/* footer */
+.container{
+    margin: 0 10vw;
+    /* border: 2px solid red; */
+}
+.footer-in{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-1{
+    width: 400px;
+    padding: 5vh 0;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.footer-1>p{
+    display: flex;
+    flex-direction: column;
+    margin: 1vh 0;
+}
+.footer-1>p>span>span{
+    font-weight: bold;
+}
+.footer-2{
+    /* border: 2px solid red; */
+    width: 300px;
+    padding: 5vh 0;
+}
+.footer-2>ul>li{
+    margin: 1.5vh 0 0 0;
+}
+.footer-3{
+    width: 300px;
+    padding: 5vh 0;
+    /* border: 2px solid red; */
+}
+.footer-3>ul>li{
+    margin: 1.5vh 0 0 0;
+}
+.footer-4{
+    /* border: 2px solid red; */
+    width: 400px;
+    padding: 5vh 0;
+}
+
+.icon-out{
+    width: 200px !important;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.form-container {
+    height: 254px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+      rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+  }
+  .lock-icon {
+    font-size: 20px;
+    color: #0e2954;
+  }
+  .form {
+    width: 100%;
+    height: 100%;
+    padding: 20px 15px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    box-sizing: border-box;
+    color: #0e2954;
+    position: relative;
+  }
+  .toggle-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  .form-title {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+  }
+  .form-sub-title {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+  }
+  .login-card,
+  .password-card {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-top: 25px;
+    gap: 20px;
+    align-items: flex-end;
+    position: absolute;
+    width: calc(100% - 30px);
+    transition: all 0.3s ease-in-out;
+    bottom: 20px;
+  }
+  .login-card {
+    left: 15px;
+  }
+  .password-card {
+    left: 100%;
+  }
+  .field-container {
+    border: 1px solid #a7a7a7;
+    border-radius: 8px;
+    width: 100%;
+    height: 45px;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  .input {
+    width: 100%;
+    height: 100%;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: transparent;
+    position: relative;
+    z-index: 11;
+  }
+  .placeholder {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #a7a7a7;
+    transition: all 0.3s ease;
+    font-size: 16px;
+  }
+  .input:focus ~ .placeholder,
+  .input:not(:placeholder-shown) ~ .placeholder {
+    top: 5px;
+    transform: none;
+    font-size: 12px;
+  }
+  .input:focus,
+  .input:not(:placeholder-shown) {
+    height: 68%;
+  }
+  .btn {
+    width: 100px;
+    height: 40px;
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+    background: #0e2954;
+    border: none;
+    outline: none;
+  }
+  .btn:focus {
+    box-shadow: none;
+  }
+  
+  .btn-label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+  }
+  .toggle-input:checked ~ .login-card {
+    left: -100%;
+  }
+  .toggle-input:checked ~ .password-card {
+    left: 15px;
+  }
+  .footer-out>p{
+    text-align: center;
+}
+  .footer-out>p>span{
+    color: rgb(20,89,92);
+    font-weight: bolder;
+}
+/* /footer */
